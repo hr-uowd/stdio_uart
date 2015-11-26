@@ -8,7 +8,7 @@ void init_uart(unsigned long baud_rate){
 	UBRRH = (unsigned char)(ubrr>>8);        
 	UBRRL = (unsigned char)ubrr;
 	UCSRB = (1<<RXEN)|(1<<TXEN);
-	UCSRC = (1<<URSEL) | (mode<<6) | (parity<<4) | (stop_bits<<3) |(char_size<<1) | (pol<<0);
+	UCSRC = (1<<URSEL) | (0<<6) | (0<<4) | (0<<3) |(3<<1) | (0<<0);
 	
 }
 
